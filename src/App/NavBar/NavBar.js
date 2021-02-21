@@ -1,10 +1,12 @@
 import { NavLink } from 'react-router-dom';
+import './NavBar.css'
 
 function NavBar(){
-  return <section>
-<NavLink to = '/'>Books</NavLink>
-{/* <NavLink to = '/addBook'>Add Books</NavLink> */}
-
+  return (
+  <section className = 'navBar'>
+    <NavLink to = '/' className ='nav'>Books</NavLink>
+    <NavLink to = '/addBook' className = 'nav'>Add Books</NavLink>
   </section>
+  )
 }
 export default NavBar
