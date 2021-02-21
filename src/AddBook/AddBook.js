@@ -14,9 +14,10 @@ function AddBook (){
         <input type="file" htmlFor = 'coverPhoto'/>
       </label>
       <label>
-        Read:
+        Check if you have Read this book:
         <input type="checkbox" htmlFor = 'hasRead'/>
       </label>
+      <button >Submit</button>
     </form>
   )
 }
