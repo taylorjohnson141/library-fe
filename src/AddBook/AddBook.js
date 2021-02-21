@@ -1,9 +1,21 @@
-import {useState} from 'react'
+import {useState, createRef} from 'react'
 
 function AddBook (){
-  let [book,addBook] = useState({})
+  let coverPhoto = createRef()
+  let [book,addBook] = useState({
+    title:'',
+    author:'',
+    coverPhoto:'',
+    hasRead:false,
+  })
   let onChange = (event) =>{
-    addBook({[event.target.id]:[event.target.value]})
+
+    if(coverPhoto.current.files.length !== 0){
+      addBook({...book,coverPhoto:coverPhoto.current.files[0].name})
+    }else{
+      addBook({...book, [event.target.id]: event.target.value})
+    }
+   console.log(book)
 
   }
   return(
@@ -18,7 +30,7 @@ function AddBook (){
       </label>
       <label>
         Cover:
-        <input type="file" htmlFor = 'coverPhoto' id ='coverPhote'  value = {book.coverPhote} onChange = {onChange}/>
+        <input type="file" htmlFor = 'coverPhoto' id ='coverPhote'  ref ={coverPhoto} onChange = {onChange}/>
       </label>
       <label>
         Check if you have Read this book:
