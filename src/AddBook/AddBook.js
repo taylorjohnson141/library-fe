@@ -14,15 +14,15 @@ function AddBook (){
       </label>
       <label>
         Author:
-        <input type="text" htmlFor = 'author'/>
+        <input type="text" htmlFor = 'author' id ='author'  value = {book.author} onChange = {onChange}/>
       </label>
       <label>
         Cover:
-        <input type="file" htmlFor = 'coverPhoto'/>
+        <input type="file" htmlFor = 'coverPhoto' id ='coverPhote'  value = {book.coverPhote} onChange = {onChange}/>
       </label>
       <label>
         Check if you have Read this book:
-        <input type="checkbox" htmlFor = 'hasRead'/>
+        <input type="checkbox" htmlFor = 'hasRead' id ='hasRead'  value = {book.hasRead} onChange = {onChange}/>
       </label>
       <button >Submit</button>
     </form>
