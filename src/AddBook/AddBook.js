@@ -2,7 +2,12 @@ function AddBook (){
   return(
     <form >
       <label>
-        <input type="text" for = 'title'/>
+        Title:
+        <input type="text" htmlFor = 'title'/>
+      </label>
+      <label>
+        Author:
+        <input type="text" htmlFor = 'author'/>
       </label>
     </form>
   )
