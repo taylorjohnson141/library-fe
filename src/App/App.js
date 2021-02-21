@@ -2,21 +2,26 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import {Route,} from 'react-router-dom'
 import BookShelf from '../BookShelf/BookShelf'
-import NavBar from './NavBar/NavBar';
+import NavBar from '../NavBar/NavBar';
+import AddBook from '../AddBook/AddBook'
 function App() {
   let [books, upDateBooks] = useState([])
 
   return (
     <section>
         <NavBar/>
-          <Route exactpath ='/'
+
+          <Route exact path ='/'
           render ={()=>{
             return <BookShelf  books = {books} upDateBooks = {upDateBooks}/>
           }}>
-            {/* <Route exactpath ='/'
+          </Route>
+
+            <Route path ='/addBook'
           render ={()=>{
-            return <BookShelf  books = {books} upDateBooks = {upDateBooks}/>
-          }}></Route> */}
+            return <AddBook books = {books} upDateBooks = {upDateBooks}/>
+          }}>
+
           </Route>
     </section>
        
