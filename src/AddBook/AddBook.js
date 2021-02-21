@@ -13,6 +13,10 @@ function AddBook (){
         Cover:
         <input type="file" htmlFor = 'coverPhoto'/>
       </label>
+      <label>
+        Read:
+        <input type="checkbox" htmlFor = 'hasRead'/>
+      </label>
     </form>
   )
 }
