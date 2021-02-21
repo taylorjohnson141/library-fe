@@ -9,14 +9,20 @@ function AddBook (){
     hasRead:false,
   })
   let onChange = (event) =>{
-
+    console.log(event)
     if(coverPhoto.current.files.length !== 0){
       addBook({...book,coverPhoto:coverPhoto.current.files[0].name})
+    }else if(event.target.id === 'hasRead'){
+      let val = false
+      if(event.target.value === 'false'){
+        val = true
+      } 
+      addBook({...book, [event.target.id]: val})
+
     }else{
       addBook({...book, [event.target.id]: event.target.value})
     }
-   console.log(book)
-
+     console.log(book)
   }
   return(
     <form >
