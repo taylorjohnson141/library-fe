@@ -13,10 +13,10 @@ function App() {
           render ={()=>{
             return <BookShelf  books = {books} upDateBooks = {upDateBooks}/>
           }}>
-            <Route exactpath ='/'
+            {/* <Route exactpath ='/'
           render ={()=>{
             return <BookShelf  books = {books} upDateBooks = {upDateBooks}/>
-          }}></Route>
+          }}></Route> */}
           </Route>
     </section>
        
