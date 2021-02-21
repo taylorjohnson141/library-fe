@@ -1,10 +1,16 @@
+import {useState} from 'react'
+
 function AddBook (){
-  
+  let [book,addBook] = useState({})
+  let onChange = (event) =>{
+    addBook({[event.target.id]:[event.target.value]})
+
+  }
   return(
     <form >
       <label>
         Title:
-        <input type="text" htmlFor = 'title'/>
+        <input type="text" htmlFor = 'title' id ='title'  value = {book.title} onChange = {onChange} />
       </label>
       <label>
         Author:
