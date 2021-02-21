@@ -6,13 +6,10 @@
   text-decoration: none;
   font-size: 30px;
 }
-a:active{
-  color:white;
+.link{
+  color: white;
   text-decoration: none;
-
 }
-a:hover{
-  color:cadetblue;
-  text-decoration: none;
-
-}
+.link:visited { text-decoration: none; color:white; }
+  .link:focus { text-decoration: none; color:white; }
+  .link:hover, .link:active { text-decoration: none; color:darkblue; }
