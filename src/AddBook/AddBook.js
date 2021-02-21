@@ -9,6 +9,10 @@ function AddBook (){
         Author:
         <input type="text" htmlFor = 'author'/>
       </label>
+      <label>
+        Cover:
+        <input type="file" htmlFor = 'coverPhoto'/>
+      </label>
     </form>
   )
 }
