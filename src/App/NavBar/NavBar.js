@@ -6,9 +6,8 @@ function NavBar(){
   <section className = 'navBar'>
     <NavLink to = '/' className ='link'>Books</NavLink>
     <NavLink to = '/addBook' className = 'link'>Add Books</NavLink>
-    <NavLink to = '/CurrentyReading' className = 'link'>Currenty Reading</NavLink>
+    <NavLink to = '/currentyReading' className = 'link'>Currenty Reading</NavLink>
     <NavLink to = '/wishlist' className ='link'>Wishlist</NavLink>
-
   </section>
   )
 }
