@@ -8,7 +8,9 @@ function BookShelf(props) {
   },[])
 
   let findBooks = props.books.map(book =>{
-    return <p>{book.author}: {book.title}</p>
+    console.log(book)
+      return <p > <img src ={book.cover} alt = 'Book Cover'  /> {book.author}: {book.title}</p>
+    
   })
   return (
     <section>

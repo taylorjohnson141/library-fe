@@ -11,7 +11,7 @@ function AddBook (){
 
   let onChange = async (event) =>{
     if(coverPhoto.current.files.length !== 0){
-      addBook({...book,coverPhoto:coverPhoto.current.files[0].name})
+      addBook({...book,coverPhoto:coverPhoto.current.files[0]})
     }
     if(event.target.id === 'hasRead'){
       let val = false
@@ -19,7 +19,6 @@ function AddBook (){
         val = true
       } 
       console.log('here')
-      //set state async always behind
         addBook({...book, hasRead: val})
 
     }else{
@@ -27,7 +26,6 @@ function AddBook (){
     }
   }
   let onSubmit = (event) =>{
-    console.log(book)
     event.preventDefault()
       fetch('http://localhost:9000/addBook',{
         method: 'Post',
@@ -40,10 +38,8 @@ function AddBook (){
       }).then(data =>{
         console.log(data)
       })
-    
-
-   
   }
+
   return(
     <form >
       <label>
